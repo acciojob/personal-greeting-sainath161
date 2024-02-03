@@ -3,6 +3,18 @@ import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [userName, setUserName] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleNameChange = (event) => {
+    setUserName(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmitted(true);
+  };
+  
   return (
     <div>
         {/* Do not remove the main div */}
